@@ -18,9 +18,15 @@
 
   <h2>Te asesoramos en TI</h2>
 
+  <form enctype="multipart/form-data" action="php/subirArchivo.php" method="POST">
+    <!-- MAX_FILE_SIZE debe preceder al campo de entrada del fichero -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- El nombre del elemento de entrada determina el nombre en el array $_FILES -->
+    <label class="control-label">Seleccionar Archivo</label>
+    <input name="fichero_usuario" id="input-1" type="file" class="file"/>
+    <input type="submit" value="Enviar fichero" />
+  </form>
 
-  <label class="control-label">Seleccionar Archivos</label>
-  <input id="input-1" type="file" class="file">
 
   <script src="jquery-3.1.1.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
